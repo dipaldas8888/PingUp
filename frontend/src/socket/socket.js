@@ -5,7 +5,10 @@ let socket = null;
 export const connectSocket = (token) => {
   if (socket?.connected) return socket;
 
-  socket = io('http://localhost:5000', {
+  const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const socketUrl = isDev ? 'http://localhost:5000' : 'https://pingup-zcce.onrender.com';
+
+  socket = io(socketUrl, {
     auth: { token },
     reconnection: true,
     reconnectionAttempts: 5,
