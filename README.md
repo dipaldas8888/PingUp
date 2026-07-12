@@ -98,8 +98,8 @@ PingUp/
 Create a file named `.env` in the `backend/` directory:
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_connection_uri
-JWT_SECRET=your_jwt_secret_key
+MONGO_URI=mongodb+srv://dasdipal8888_db_user:9elpxauzg5u875KL@cluster0.fpylvac.mongodb.net/pingup?appName=Cluster0
+JWT_SECRET=pingup_super_secret_jwt_key_2026_change_in_production
 CLIENT_URL=https://ping-up-six-sigma.vercel.app
 NODE_ENV=development
 ```
